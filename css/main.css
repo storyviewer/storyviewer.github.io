@@ -1,0 +1,108 @@
+/* 
+	InstaProfile
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+body, input, textarea, button, select, a { font-family: "Roboto", sans-serif; color: #222222; font-size: 14px; line-height: 16px; -webkit-font-smoothing: antialiased; }
+
+/* Global */
+html, body {margin: 0; padding: 0; width: 100%; height: 100%; background: #FFFFFF; cursor: default; }
+* { outline:none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+*,:before,:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+a { text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+@keyframes pop {
+  50%  {transform: scale(1.05);}
+}
+
+/* Tracking */
+.amung-us { position:absolute; top:0; left:0; float: left; width:1px; height:1px; overflow:hidden; }
+
+/* Info */
+.info { float: left; width: 100%; padding: 90px 20px 70px 20px; background: #B33F62; }
+.info .center { display: block; margin: 0 auto; width: 100%; max-width: 900px; }
+.info .center .app-info { float: left; padding: 20px 0 0 0; width: 100%; max-width: 410px; color: #FFFFFF; }
+.info .center .app-info .icon { display: block; margin: 0 0 30px 0; width: 100px; height: 100px; background: url(../images/app-icon.png) center center no-repeat; background-size: cover; }
+.info .center .app-info .name { display: block; margin: 0 0 20px 0; padding: 0; font-size: 44px; line-height: 44px; font-weight: 500; }
+.info .center .app-info .description { display: block; margin: 0; padding: 0; font-size: 24px; line-height: 28px; font-weight: 300; }
+.info .center .app-info .app-links { display: block; width: 100%; margin: 40px auto 0 auto; text-align: left; }
+.info .center .app-info .app-links .link { display: inline-block; margin: 0 10px 10px 0; padding: 0 0 0 20px; width: 190px; height: 54px; font-size: 18px; line-height: 54px; font-weight: 500; color: #FFFFFF; text-align: center; background: #D6769E left center no-repeat; background-size: 60px 40px; -webkit-border-radius: 10px; border-radius: 10px; }
+.info .center .app-info .app-links .link:hover { animation: pop 300ms ease-in; }
+.info .center .app-info .app-links .link:last-child { margin: 0 0 10px 0; }
+.info .center .app-info .app-links .link.app-store { background-image: url(../images/app-store.png); }
+.info .center .app-info .app-links .link.play-store { background-image: url(../images/play-store.png); }
+
+/* Screens */
+.screens { float: left; width: 100%; padding: 0px 20px 0px 20px; background: #FFFFFF; }
+.screens .center { display: block; margin: 0 auto; width: 100%; max-width: 900px; }
+.screens .center .app-screens { position: relative; top: -520px; right: 0; float: right; }
+.screens .center .app-screens .phone { z-index: 3; position: absolute; top: 0; right: 0; width: 348px; height: 692px; background: url(../images/phone.png) center center no-repeat; background-size: 348px 692px; }
+.screens .center .app-screens .screen-slides { z-index: 2; position: absolute; top: 21px; right: 24px; width: 300px; height: 650px; background: #FFFFFF; }
+.screens .center .app-screens .screen-slides .slide { float: left; width: 100%; display: none; }
+.screens .center .app-screens .screen-slides .slide img { float: left; width: 100%; }
+
+/* Footer */
+.footer { float: left; width: 100%; padding: 40px 20px 150px 20px; background: #FFFFFF; }
+.footer .center { display: block; margin: 0 auto; width: 100%; max-width: 900px; }
+.footer .center .disclaimer { display: block; font-size: 14px; line-height: 18px; font-weight: 300; }
+.footer .center .copyright { display: block; font-size: 14px; line-height: 18px; font-weight: 300; }
+.footer .center .copyright a { color: #3B1C8A; font-weight: 400; }
+
+
+/* Break Points */
+@media all and (max-width: 850px) {
+
+	/* Info */
+	.info { padding: 40px 20px 120px 20px;}
+	.info .center .app-info { padding: 0 0 0 0; max-width: 100%; }
+	.info .center .app-info .icon { margin: 0 auto 10px auto; }
+	.info .center .app-info .name { text-align: center; margin: 0 0 10px 0; }
+	.info .center .app-info .description { text-align: center; font-size: 18px; line-height: 24px; }
+	.info .center .app-info .app-links { text-align: center; margin: 20px auto 0 auto; }
+
+	/* Screens */
+	.screens { padding: 20px 20px 0px 20px; }
+	.screens .center { display: block; margin: 0 auto; width: 100%; max-width: 900px; }
+	.screens .center .app-screens { position: relative; top: 0; left: 50%; float: none; margin: -100px auto 0 -174px;  width: 348px; height: 692px; }
+	.screens .center .app-screens .phone { z-index: 3; position: absolute; top: 0; right: 0; }
+
+	/* Footer */
+	.footer { padding: 40px 20px 40px 20px; margin: 40px 0 0 0; border-top: 1px solid #EEEEEE; text-align: center; }
+
+}
+
+
+
+@media all and (max-width: 480px) {
+
+	.info .center .app-info .app-links .link { margin: 0 0 10px 0; width: 240px; }
+	.info .center .app-info .app-links .link:last-child { margin: 0 0 0 0; }
+
+}
+
+
+/* -- Screens DPI -- */
+
+/* -- @2x -- */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+	.info .center .app-info .icon { background-image: url(../images/app-icon@2x.png); }
+	.info .center .app-info .app-links .link.app-store { background-image: url(../images/app-store@2x.png); }
+	.info .center .app-info .app-links .link.play-store { background-image: url(../images/play-store@2x.png); }
+	.screens .center .app-screens .phone { background-image: url(../images/phone@2x.png); }
+
+}
+
+
+/* -- @3x -- */
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+
+	.info .center .app-info .icon { background-image: url(../images/app-icon@3x.png); }
+	.info .center .app-info .app-links .link.app-store { background-image: url(../images/app-store@3x.png); }
+	.info .center .app-info .app-links .link.play-store { background-image: url(../images/play-store@3x.png); }
+	.screens .center .app-screens .phone { background-image: url(../images/phone@3x.png); }
+
+}
+
