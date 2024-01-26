@@ -1,20 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>FAQ - Story Viewer for Insta App</title>
-<style>
-    body { font-family: Arial, sans-serif; }
-    .faq-header { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
-    .faq-content { margin-bottom: 20px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ & Support</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        .faq-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .faq-title {
+            padding: 0px 20px;
+            margin: 0;
+            background: #eff0f1;
+            border-bottom: 1px solid #d3d4d5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .faq-content {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #d3d4d5;
+        }
+        .faq-content.active {
+            display: block;
+        }
+        h3 {
+            font-size: 18px;
+            color: #333;
+        }
+        p, ol, li {
+            font-size: 16px;
+            color: #666;
+        }
+        .arrow {
+            border: solid black;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        .arrow.down {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+    </style>
 </head>
 <body>
 
-<div class="faq-container">
-    <div class="faq-header">Frequently Asked Questions</div>
+<h1 align="center">FAQ & Support</h1>
 
-    <div class="faq-content">
+<div class="faq-container">
+    <div class="faq-title">
         <h3>How to Cancel Auto-Renewable Subscription in iOS</h3>
+        <i class="arrow"></i>
+    </div>
+    <div class="faq-content">
         <p>Follow these steps to cancel your auto-renewable subscription:</p>
         <ol>
             <li>Open the <strong>Settings</strong> app on your iOS device.</li>
@@ -26,8 +79,11 @@
         <p>Note: Cancelling a subscription will stop the auto-renewal, but you will still have access to the subscription's features until the end of the current billing period.</p>
     </div>
 
-    <div class="faq-content">
+    <div class="faq-title">
         <h3>Seeing Ads After Purchasing Subscription</h3>
+        <i class="arrow"></i>
+    </div>
+    <div class="faq-content">
         <p>If you have paid for a subscription but are still seeing ads, you may need to restore your purchases. This can happen in some cases, such as reinstalling the app or using a new device.</p>
         <ol>
             <li>Open our app on your iOS device.</li>
@@ -37,13 +93,28 @@
         <p>This should synchronize your purchase with your device, removing any ads if your subscription is still active. If you continue to experience issues, please contact our support team for assistance.</p>
     </div>
 
-    <div class="faq-content">
+    <div class="faq-title">
         <h3>Contact Us</h3>
+        <i class="arrow"></i>
+    </div>
+    <div class="faq-content">
         <p>If you have any other questions or need further assistance, feel free to contact us. Our support team is always ready to help you.</p>
         <p>Email: <a href="mailto:storyviewerforinsta@gmail.com">storyviewerforinsta@gmail.com</a></p>
     </div>
-
 </div>
+
+<script>
+    // JavaScript for toggle functionality
+    document.addEventListener("DOMContentLoaded", function() {
+        var faqTitles = document.querySelectorAll('.faq-title');
+        faqTitles.forEach(function(faqTitle) {
+            faqTitle.addEventListener('click', function() {
+                this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+                this.querySelector('.arrow').classList.toggle('down');
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
